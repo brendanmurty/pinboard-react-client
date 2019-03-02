@@ -4,6 +4,14 @@ A front-end for the [Pinboard](https://pinboard.in/) bookmarking service created
 
 ## Development
 
-To begin the development, run `npm start` or `yarn start`.
+To begin development:
 
-To create a production bundle, use `npm run build` or `yarn build`.
+```
+npm start
+```
+
+To create a production bundle:
+
+```
+npm run build
+```
