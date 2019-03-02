@@ -1,7 +1,13 @@
 {
   "name": "pinboard-client",
   "version": "0.1.0",
+  "author": "Brendan Murty <b@murty.io> (https://b.murty.io/)",
+  "description": "A front-end for the Pinboard bookmarking service created with React.",
   "private": true,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/brendanmurty/pinboard-react-client"
+  },
   "dependencies": {
     "react": "^16.8.1",
     "react-dom": "^16.8.1",
@@ -21,8 +27,5 @@
     "not dead",
     "not ie <= 11",
     "not op_mini all"
-  ],
-  "devDependencies": {
-    "webpack": "^2.2.0-rc.0"
-  }
+  ]
 }
