@@ -39,9 +39,9 @@ a:visited {
 
 .App-header {
   background-color: #23c5b0;
+  color: #fff;
   height: 70px;
   line-height: 70px;
-  color: white;
 }
 
 .App-header ul {
