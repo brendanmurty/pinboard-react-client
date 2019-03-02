@@ -30,6 +30,7 @@ a:visited {
 
 .App-logo {
   height: 50px;
+  margin-top: 10px;
   font-size: 30px;
   pointer-events: none;
   float: left;
@@ -38,8 +39,8 @@ a:visited {
 
 .App-header {
   background-color: #23c5b0;
-  height: 50px;
-  line-height: 50px;
+  height: 70px;
+  line-height: 70px;
   color: white;
 }
 
@@ -62,7 +63,7 @@ a:visited {
 
 .App-main {
   text-align: left;
-  padding: 20px;
+  padding: 30px 20px;
 }
 
 .App-main h1 {
