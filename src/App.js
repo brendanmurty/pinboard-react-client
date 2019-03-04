@@ -33,7 +33,7 @@ function App() {
 function All() {
   return (
     <div>
-      <h2>All Bookmarks</h2>
+      <h2>All</h2>
     </div>
   );
 }
@@ -66,7 +66,7 @@ function Tags({ match }) {
       <Route
         exact
         path={match.path}
-        render={() => <h3>Please select a topic.</h3>}
+        render={() => ''}
       />
     </div>
   );
