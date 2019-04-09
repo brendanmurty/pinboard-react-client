@@ -1,5 +1,5 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
+import React from 'react';
+import Logo from './logo.svg';
 import './App.css';
 
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
@@ -7,7 +7,11 @@ import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 function App() {
   return (
     <Router>
-      <div>
+      <nav>
+        <header>
+          <img src={Logo} />
+        </header>
+
         <ul>
           <li>
             <Link to="/">All</Link>
@@ -25,7 +29,7 @@ function App() {
         <Route exact path="/" component={All} />
         <Route path="/unread" component={Unread} />
         <Route path="/tags" component={Tags} />
-      </div>
+      </nav>
     </Router>
   );
 }
