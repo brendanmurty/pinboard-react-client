@@ -6,7 +6,7 @@ var express = require('express'),
 
 // Send all requests to React
 app.get('*', function (request, response) {
-    response.sendFile('build/index.html', { 'root': __dirname });
+    response.sendFile('index.html', { 'root': __dirname + '/build' });
 });
 
 // Start the server
