@@ -6,16 +6,18 @@ A front-end for the [Pinboard](https://pinboard.in/) bookmarking service created
 
 ```
 npm install
-npm install -g serve
+npm install -g forever
 ```
 
 ## Development
 
-To begin development:
+To start a development server:
 
 ```
 npm start
 ```
+
+## Deployment
 
 To create a production bundle:
 
@@ -23,8 +25,14 @@ To create a production bundle:
 npm run build
 ```
 
-To run a production server:
+To start the production server:
 
 ```
-serve -s build
+npm run server
+```
+
+To stop the production server:
+
+```
+npm run serverstop
 ```
