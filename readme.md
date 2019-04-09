@@ -7,7 +7,10 @@ A front-end for the [Pinboard](https://pinboard.in/) bookmarking service created
 ```
 npm install
 npm install -g forever
+cp .env.example .env
 ```
+
+Then set the appropriate values for the variables in the `.env` file.
 
 ## Development
 
