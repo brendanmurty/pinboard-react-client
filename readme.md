@@ -6,7 +6,7 @@ A front-end for the [Pinboard](https://pinboard.in/) bookmarking service created
 
 ```
 npm install
-npm install -g forever
+npm install -g serve
 cp .env.example .env
 ```
 
@@ -32,10 +32,4 @@ To create a production bundle and start the production server:
 
 ```
 npm run prod-start
-```
-
-To stop the production server:
-
-```
-npm run prod-stop
 ```

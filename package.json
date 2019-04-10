@@ -9,7 +9,6 @@
     "url": "https://github.com/brendanmurty/pinboard-react-client"
   },
   "dependencies": {
-    "express": "^4.16.4",
     "node-pinboard": "^1.0.0",
     "react": "^16.8.1",
     "react-dom": "^16.8.1",
@@ -21,8 +20,7 @@
     "build": "react-scripts build",
     "eject": "react-scripts eject",
     "setenv": "set -o allexport; source .env; set +o allexport",
-    "prod-start": "npm run build; npm run setenv; export NODE_ENV=production; forever start -o logs/output.log -e logs/error.log -a server.js",
-    "prod-stop": "forever stopall"
+    "prod-start": "npm run build; npm run setenv; export NODE_ENV=production; serve -s build -l 80"
   },
   "eslintConfig": {
     "extends": "react-app"
