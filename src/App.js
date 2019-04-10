@@ -3,11 +3,13 @@ import React from 'react';
 import Logo from './logo.svg';
 import './App.css';
 
-// import Pinboard from "node-pinboard";
+import Pinboard from "node-pinboard";
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 
 function App() {
-    console.log('Current Pinboard API Token: ' + process.env.REACT_APP_PINBOARD_API_TOKEN);
+    const pinboard = new Pinboard(process.env.REACT_APP_PINBOARD_API_TOKEN);
+
+    console.log(pinboard);
 
     return (
         <Router>
