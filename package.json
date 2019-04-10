@@ -17,10 +17,11 @@
     "react-scripts": "^2.1.8"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "npm run setenv; react-scripts start",
     "build": "react-scripts build",
     "eject": "react-scripts eject",
-    "prod-start": "npm run build; set -o allexport; source .env; set +o allexport; forever start -o app-output.log -e app-error.log -l app-forever.log -a server.js",
+    "setenv": "set -o allexport; source .env; set +o allexport;",
+    "prod-start": "npm run build; npm run setenv; forever start -o app-output.log -e app-error.log -l app-forever.log -a server.js",
     "prod-stop": "forever stopall"
   },
   "eslintConfig": {
