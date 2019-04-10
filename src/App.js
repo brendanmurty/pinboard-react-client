@@ -9,7 +9,7 @@ function App() {
     <Router>
       <nav>
         <header>
-          <img src={Logo} />
+          <img src={Logo} alt="Pinboard Client" />
         </header>
 
         <ul>
