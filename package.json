@@ -20,8 +20,8 @@
     "start": "npm run setenv; react-scripts start",
     "build": "react-scripts build",
     "eject": "react-scripts eject",
-    "setenv": "set -o allexport; source .env; set +o allexport;",
-    "prod-start": "npm run build; npm run setenv; forever start -o app-output.log -e app-error.log -l app-forever.log -a server.js",
+    "setenv": "set -o allexport; source .env; set +o allexport",
+    "prod-start": "npm run build; npm run setenv; export NODE_ENV=production; forever start -o logs/output.log -e logs/error.log -a server.js",
     "prod-stop": "forever stopall"
   },
   "eslintConfig": {
