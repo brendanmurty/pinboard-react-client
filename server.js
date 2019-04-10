@@ -1,14 +1,13 @@
-// Initialise app
-var express = require('express'),
-    app = express(),
-    app_domain = process.env.APP_DOMAIN || 'localhost',
-    app_port = process.env.APP_PORT || 80;
+const express = require('express');
+const path = require('path');
+const app = express();
+const app_domain = process.env.APP_DOMAIN || 'localhost';
+const app_port = process.env.APP_PORT || 80;
 
-// Send all requests to React
-app.get('*', function (request, response) {
-    response.sendFile('index.html', { 'root': __dirname + '/build' });
+app.use(express.static(path.join(__dirname, 'build')));
+
+app.get('/', function(req, res) {
+  res.sendFile(path.join(__dirname, 'build', 'index.html'));
 });
 
-// Start the server
 app.listen(app_port, app_domain);
-console.log('http server started at http://' + app_domain + ':' + app_port);

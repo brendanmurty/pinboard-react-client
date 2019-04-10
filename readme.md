@@ -10,7 +10,7 @@ npm install -g forever
 cp .env.example .env
 ```
 
-Then set the appropriate values for the variables in the `.env` file.
+Then set the appropriate configuration values for the application in the `.env` file.
 
 ## Development
 
@@ -28,14 +28,14 @@ To create a production bundle:
 npm run build
 ```
 
-To start the production server:
+To create a production bundle and start the production server:
 
 ```
-npm run server
+npm run prod-start
 ```
 
 To stop the production server:
 
 ```
-npm run serverstop
+npm run prod-stop
 ```
