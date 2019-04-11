@@ -6,11 +6,9 @@ import './App.css';
 import Pinboard from "node-pinboard";
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 
+const PinboardClient = new Pinboard(process.env.REACT_APP_PINBOARD_API_TOKEN);
+
 function App() {
-    const pinboard = new Pinboard(process.env.REACT_APP_PINBOARD_API_TOKEN);
-
-    console.log(pinboard);
-
     return (
         <Router>
             <main>
@@ -22,7 +20,7 @@ function App() {
 
                     <ul>
                         <li>
-                            <Link to="/">All</Link>
+                            <Link to="/">Recent</Link>
                         </li>
                         <li>
                             <Link to="/unread">Unread</Link>
@@ -31,7 +29,7 @@ function App() {
                 </nav>
 
                 <section>
-                    <Route exact path="/" component={All} />
+                    <Route exact path="/" component={Recent} />
                     <Route path="/unread" component={Unread} />
                 </section>
             </main>
@@ -39,15 +37,23 @@ function App() {
     );
 }
 
-function All() {
+function Recent() {
+    PinboardClient.recent({}, function(error, response) {
+        console.log(error, response);
+    });
+    
     return (
         <div>
-            <h2>All</h2>
+            <h2>Recent</h2>
         </div>
     );
 }
 
 function Unread() {
+    PinboardClient.get({tag: 'toread'}, function(error, response) {
+        console.log(error, response);
+    });
+    
     return (
         <div>
             <h2>Unread</h2>
