@@ -13,28 +13,28 @@ function App() {
 
     return (
         <Router>
-            <nav>
-                <header>
-                    <img src={Logo} alt="Pinboard Client" />
-                </header>
+            <main>
+                <nav>
+                    <header>
+                        <img src={Logo} alt="Logo" />
+                        <span>Pinboard Client</span>
+                    </header>
 
-                <ul>
-                    <li>
-                        <Link to="/">All</Link>
-                    </li>
-                    <li>
-                        <Link to="/unread">Unread</Link>
-                    </li>
-                    <li>
-                        <Link to="/tags">Tags</Link>
-                    </li>
-                </ul>
+                    <ul>
+                        <li>
+                            <Link to="/">All</Link>
+                        </li>
+                        <li>
+                            <Link to="/unread">Unread</Link>
+                        </li>
+                    </ul>
+                </nav>
 
-                <hr />
-
-                <Route exact path="/" component={All} />
-                <Route path="/unread" component={Unread} />
-            </nav>
+                <section>
+                    <Route exact path="/" component={All} />
+                    <Route path="/unread" component={Unread} />
+                </section>
+            </main>
         </Router>
     );
 }

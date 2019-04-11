@@ -1,62 +1,52 @@
-.App-header li a,
-.App-header li a:active,
-.App-header li a:hover,
-.App-header li a:visited {
-  color: #fff;  
-}
-
-.App {
-  text-align: center;
+body {
   height: 100%;
+  padding: 0;
+  margin: 0;
+  background-color: #000;
+  color: #fff;
+  font: 400 16px/25px "Merriweather";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-.App-logo {
+a,
+a:active,
+a:hover,
+a:visited {
+  color: #23c5b0;
+}
+
+main {
+  width: 96%;
+  max-width: 600px;
+  margin: 2% auto;
+}
+
+nav header {
   height: 50px;
-  margin-top: 10px;
+  line-height: 50px;
+}
+
+nav header img {
+  height: 50px;
   font-size: 30px;
   pointer-events: none;
   float: left;
   margin-right: 10px;
 }
 
-.App-header {
-  background-color: #23c5b0;
-  color: #fff;
-  height: 70px;
-  line-height: 70px;
-}
-
-.App-header ul {
-  margin: 0;
-  padding: 0;
+nav ul {
+  clear: both;
   float: left;
+  margin: 20px 0;
+  padding: 0;
+  width: 100%;
   list-style: none outside none;
 }
 
-.App-header li {
+nav li {
   float: left;
-  margin: 0 20px 20px 0;
+  margin: 0 10px 0 0;
   padding: 0;
 }
-
-.App-link {
-  color: #61dafb;
-}
-
-.App-main {
-  text-align: left;
-  padding: 30px 20px;
-}
-
-.App-main h1 {
-  margin-top: 0;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
+ 
