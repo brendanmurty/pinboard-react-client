@@ -12,6 +12,10 @@ cp .env.example .env
 
 Then set the appropriate configuration values for the application in the `.env` file.
 
+## Documentation
+
+View more documentation in the [docs directory](docs/).
+
 ## Development
 
 To start a development server:
