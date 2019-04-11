@@ -14,8 +14,10 @@ function App() {
             <main>
                 <nav>
                     <header>
-                        <img src={Logo} alt="Logo" />
-                        <span>Pinboard Client</span>
+                        <Link to="/">
+                            <img src={Logo} alt="Logo" />
+                            <span>Pinboard Client</span>
+                        </Link>
                     </header>
 
                     <ul>
