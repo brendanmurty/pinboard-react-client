@@ -7,17 +7,12 @@ var express = require('express'),
 const app_domain = process.env.PINBOARD_APP_DOMAIN || 'localhost';
 const app_port = process.env.PINBOARD_APP_PORT || 80;
 
-// Allow external requests to the Pinboard API domain
-var corsOptions = {
-  origin: 'https://api.pinboard.in',
-  optionsSuccessStatus: 200
-}
-
 // Allow static content requests
 app.use(express.static(__dirname + '/build'));
 
-// Send all other requests to React along with the customised CORS options
-app.get('*', cors(corsOptions), function (request, response) {
+// Send all other requests to React
+app.options('*', cors({ origin: app_domain }));
+app.get('*', cors({ origin: app_domain }), function (request, response) {
     response.sendFile('index.html', { 'root': __dirname + '/build' });
 });
 
