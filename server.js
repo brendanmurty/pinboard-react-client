@@ -13,7 +13,10 @@ var corsOptions = {
   optionsSuccessStatus: 200
 }
 
-// Send all requests to React
+// Allow static content requests
+app.use(express.static(__dirname + '/build'));
+
+// Send all other requests to React along with the customised CORS options
 app.get('*', cors(corsOptions), function (request, response) {
     response.sendFile('index.html', { 'root': __dirname + '/build' });
 });
