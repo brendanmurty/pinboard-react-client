@@ -6,7 +6,6 @@ A front-end for the [Pinboard](https://pinboard.in/) bookmarking service created
 
 ```
 npm install
-npm install -g serve
 cp .env.example .env
 ```
 
@@ -18,7 +17,7 @@ View more documentation in the [docs directory](docs/).
 
 ## Development
 
-To start a development server:
+### Start a development server
 
 ```
 npm start
@@ -26,14 +25,20 @@ npm start
 
 ## Deployment
 
-To create a production bundle:
+### Create a production bundle
 
 ```
 npm run build
 ```
 
-To create a production bundle and start the production server:
+### Update the domain and port to listen on
+
+1. Stop the server
+2. Edit the `APP_DOMAIN` and `APP_PORT` values in `.env`
+3. Start the server again
+
+### Create a production bundle and start the production server
 
 ```
-npm run prod-start
+npm run start-prod
 ```
