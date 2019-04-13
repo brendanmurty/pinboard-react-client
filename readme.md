@@ -15,30 +15,22 @@ Then set the appropriate configuration values for the application in the `.env` 
 
 View more documentation in the [docs directory](docs/).
 
-## Development
-
-### Start a development server
-
-```
-npm start
-```
-
-## Deployment
-
-### Create a production bundle
-
-```
-npm run build
-```
-
-### Update the domain and port to listen on
+## Update the domain and port configuration
 
 1. Stop the server
 2. Edit the `APP_DOMAIN` and `APP_PORT` values in `.env`
 3. Start the server again
 
-### Create a production bundle and start the production server
+## Scripts
+
+### Compile a production-ready asset bundle
 
 ```
-npm run start-prod
+npm run build
+```
+
+### Start the web server
+
+```
+npm run start
 ```

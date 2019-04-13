@@ -3,10 +3,7 @@ import React from 'react';
 import Logo from './logo.svg';
 import './App.css';
 
-import Pinboard from "node-pinboard";
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
-
-const PinboardClient = new Pinboard(process.env.REACT_APP_PINBOARD_API_TOKEN);
 
 function App() {
     return (
@@ -40,10 +37,6 @@ function App() {
 }
 
 function Recent() {
-    PinboardClient.recent({}, function(error, response) {
-        console.log(error, response);
-    });
-    
     return (
         <div>
             <h2>Recent</h2>
@@ -52,10 +45,6 @@ function Recent() {
 }
 
 function Unread() {
-    PinboardClient.get({tag: 'toread'}, function(error, response) {
-        console.log(error, response);
-    });
-    
     return (
         <div>
             <h2>Unread</h2>

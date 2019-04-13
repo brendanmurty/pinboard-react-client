@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "cors": "^2.8.5",
+    "dotenv": "^7.0.0",
     "express": "^4.16.4",
     "node-pinboard": "^1.0.0",
     "react": "^16.8.1",
@@ -18,9 +19,8 @@
     "react-scripts": "^2.1.8"
   },
   "scripts": {
-    "start": "npm run build; export NODE_ENV=development; set -o allexport; source .env; set +o allexport; node server.js",
-    "start-prod": "npm run build; export NODE_ENV=production; set -o allexport; source .env; set +o allexport; node server.js",
-    "build": "react-scripts build"
+    "build": "react-scripts build",
+    "start": "node -r dotenv/config server.js"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -30,5 +30,6 @@
     "not dead",
     "not ie <= 11",
     "not op_mini all"
-  ]
+  ],
+  "devDependencies": {}
 }
