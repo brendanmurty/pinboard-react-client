@@ -8,9 +8,6 @@ var express = require('express'),
 const app_domain = process.env.PINBOARD_APP_DOMAIN || 'localhost';
 const app_port = process.env.PINBOARD_APP_PORT || 80;
 
-// Allow static content requests
-app.use(express.static(__dirname + '/build'));
-
 // Load back-end API controllers
 var pinboard_recent = require('./src/api/pinboard_recent.js'),
     pinboard_unread = require('./src/api/pinboard_unread.js');
@@ -18,6 +15,10 @@ var pinboard_recent = require('./src/api/pinboard_recent.js'),
 // Configure back-end API routes
 router.get('/api/pinboard_recent', pinboard_recent.get);
 router.get('/api/pinboard_unread', pinboard_unread.get);
+
+// Allow static content requests
+app.use('/', router);
+app.use(express.static(__dirname + '/build'));
 
 // Send all other requests to React
 app.options('*', cors({ origin: app_domain }));
