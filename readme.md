@@ -17,6 +17,12 @@ View more documentation in the [docs directory](docs/).
 
 View the project's [todo list](docs/todo.md).
 
+## License
+
+You can view the [License](license.md) file for rights and limitations when using the code here in your own projects.
+
+The license is based on the [CSS-Tricks License](https://css-tricks.com/license/) which was created by [Chris Coyier](https://github.com/chriscoyier/).
+
 ## Update the domain and port configuration
 
 1. Stop the server
