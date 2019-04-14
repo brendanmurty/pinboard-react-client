@@ -6,6 +6,3 @@
 
 *.env
 !example.env
-
-logs/*
-!logs/.gitkeep
