@@ -8,7 +8,7 @@ An alternative front-end for the [Pinboard](https://pinboard.in/) bookmarking se
 
 ```
 npm install
-cp .env.example .env
+cp example.env .env
 ```
 
 Then set the appropriate configuration values for the application in the `.env` file.
