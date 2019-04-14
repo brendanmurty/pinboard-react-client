@@ -12,7 +12,7 @@ class Unread extends React.Component {
     }
 
     componentDidMount() {
-        fetch('/api/pinboard_unread').then(response => response.json()).then(
+        fetch('/api/unread').then(response => response.json()).then(
             (response) => {
                 this.setState({
                     loaded: true,

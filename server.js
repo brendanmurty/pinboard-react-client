@@ -16,12 +16,12 @@ app.use(basic_auth({
 }))
 
 // Load back-end API controllers
-var pinboard_recent = require('./src/api/pinboard_recent.js'),
-    pinboard_unread = require('./src/api/pinboard_unread.js');
+var api_recent = require('./src/api/recent.js'),
+    api_unread = require('./src/api/unread.js');
 
 // Configure back-end API routes
-router.get('/api/pinboard_recent', pinboard_recent.get);
-router.get('/api/pinboard_unread', pinboard_unread.get);
+router.get('/api/recent', api_recent.get);
+router.get('/api/unread', api_unread.get);
 
 // Allow static content requests
 app.use('/', router);
