@@ -8,7 +8,6 @@ const app_domain = process.env.PINBOARD_APP_DOMAIN || 'localhost';
 const app_port = process.env.PINBOARD_APP_PORT || 80;
 
 // Show a browser-level user prompt for basic authentication
-// TODO: Replace this with a proper user-based authentication system
 const basic_auth = require('express-basic-auth')
 const user_pass = process.env.PINBOARD_AUTH_PASS;
 app.use(basic_auth({

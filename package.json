@@ -2,7 +2,7 @@
   "name": "pinboard-client",
   "version": "0.1.0",
   "author": "Brendan Murty <b@murty.io> (https://b.murty.io/)",
-  "description": "A front-end for the Pinboard bookmarking service created with React.",
+  "description": "An alternative front-end for the Pinboard bookmarking service.",
   "private": true,
   "repository": {
     "type": "git",

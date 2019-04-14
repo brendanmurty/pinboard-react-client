@@ -1,6 +1,6 @@
 # Pinboard React Client
 
-A front-end for the [Pinboard](https://pinboard.in/) bookmarking service created with [React](https://github.com/facebook/react/).
+An alternative front-end for the [Pinboard](https://pinboard.in/) bookmarking service created with [React](https://reactjs.org/) and [Express](https://expressjs.com/).
 
 ## Initial Setup
 
@@ -14,6 +14,8 @@ Then set the appropriate configuration values for the application in the `.env` 
 ## Documentation
 
 View more documentation in the [docs directory](docs/).
+
+View the project's [todo list](docs/todo.md).
 
 ## Update the domain and port configuration
 

@@ -1,7 +1,7 @@
 // API: /api/pinboard_unread
 
 var node_pinboard = require('node-pinboard'),
-    pinboard_api = new node_pinboard(process.env.PINBOARD_API_TOKEN), // TODO: Load this from the user record when that system has been built
+    pinboard_api = new node_pinboard(process.env.PINBOARD_API_TOKEN),
     hashids = require('hashids'),
     hash_ids = new hashids();
 
