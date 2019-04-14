@@ -2,6 +2,8 @@
 
 An alternative front-end for the [Pinboard](https://pinboard.in/) bookmarking service created with [React](https://reactjs.org/) and [Express](https://expressjs.com/).
 
+![Screenshot of application](screenshot.png)
+
 ## Initial Setup
 
 ```
