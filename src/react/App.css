@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Merriweather');
+
 body {
   height: 100%;
   padding: 0;
@@ -62,6 +64,9 @@ ul.bookmarks li {
   padding: 0;
 }
 
-ul.bookmarks li.unread a::before {
-  content: '>> ';
+ul.bookmarks li.unread a,
+ul.bookmarks li.unread a:active,
+ul.bookmarks li.unread a:hover,
+ul.bookmarks li.unread a:visited {
+  color: #6923c5;
 }
