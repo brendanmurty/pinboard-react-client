@@ -1,7 +1,10 @@
+// UI: Unread - Show a list of the user's unread bookmarks, a loading message or a error message
+
 import React from 'react';
 
 class Unread extends React.Component {
     constructor(props) {
+        // Prepare the component's properties
         super(props);
 
         this.state = {
@@ -12,14 +15,17 @@ class Unread extends React.Component {
     }
 
     componentDidMount() {
+        // Attempt to load the data from the API
         fetch('/api/unread').then(response => response.json()).then(
             (response) => {
+                // Valid response in JSON format
                 this.setState({
                     loaded: true,
                     bookmarks: response
                 });
             },
             (error) => {
+                // Error encountered
                 this.setState({
                     loaded: true,
                     error
@@ -29,6 +35,7 @@ class Unread extends React.Component {
     }
 
     render() {
+        // Load the component's properties
         const { error, loaded, bookmarks } = this.state;
 
         if (error) {

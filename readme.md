@@ -4,34 +4,53 @@ An alternative front-end for the [Pinboard](https://pinboard.in/) bookmarking se
 
 ![Screenshot of application](screenshot.png)
 
-## Initial Setup
+## Directory Structure
+
+- [assets](assets/) - Design-related source files
+- [docs](docs/) - Project documentation files
+- [docs/todo.md](docs/todo.md) - The project's task list
+- [public](public/) - Front-end image and HTML files that are also used in the build process
+- [src/api](src/api/) - Back-end API endpoint logic built using Express
+- [src/css](src/css/) - Styling files for the UI
+- [src/ui](src/ui/) - Front-end UI components built using React
+- [src/index.js](src/index.js) - Front-end entry point used to initialise the UI via React
+- [license.md](license.md) - The project's license file for details on the rights and limitations when using the code here in your own projects
+- [package.json](package.json) - Node package configuration file that also includes shortcut commands in the `scripts` section
+- [server.js](server.js) - Node web server that uses Express to configure routes for both the back-end and front-end
+
+## Configuration
+
+### Initial Setup
 
 ```
 npm install
 cp example.env .env
 ```
 
-Then set the appropriate configuration values for the application in the `.env` file.
+Then edit the `.env` file to use the appropriate configuration values for the application.
 
-## Documentation
+### Update the Pinboard API Token
 
-View more documentation in the [docs directory](docs/).
+1. Visit your [Pinboard password page](https://pinboard.in/settings/password)
+2. Save this in `.env` as the value of the `PINBOARD_API_TOKEN` variable
+3. Apply the changes to the application: `npm run build-start`
 
-View the project's [todo list](docs/todo.md).
+### Update the password for the login dialog
 
-## License
+The system currently uses a Basic HTTP Authentication dialog for logging in.
 
-You can view the [License](license.md) file for rights and limitations when using the code here in your own projects.
+The username for this dialog is `pinboard`, but this can be changed by editing the `express-basic-auth` section in [server.js](server.js).
 
-The license is based on the [CSS-Tricks License](https://css-tricks.com/license/) which was created by [Chris Coyier](https://github.com/chriscoyier/).
+The password for this dialog is set via the `PINBOARD_AUTH_PASS` variable in the `.env` file.
 
-## Update the domain and port configuration
+To apply the changes to the application: `npm run build-start`
 
-1. Stop the server
-2. Edit the `APP_DOMAIN` and `APP_PORT` values in `.env`
-3. Start the server again
+### Update the domain and port configuration
 
-## Scripts
+1. Edit the `APP_DOMAIN` and `APP_PORT` values in `.env`
+2. Apply the changes to the application: `npm run build-start`
+
+## Commands
 
 ### Compile a production-ready asset bundle
 

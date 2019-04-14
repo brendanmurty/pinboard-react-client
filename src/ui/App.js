@@ -1,3 +1,5 @@
+// UI: App - Build the base layout, routes, navigation and load the other UI objects
+
 import React from 'react';
 
 import '../css/App.css';

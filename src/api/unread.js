@@ -1,4 +1,4 @@
-// API: /api/pinboard_unread
+// API: /api/unread - Returns a JSON string of the user's unread posts
 
 var node_pinboard = require('node-pinboard'),
     pinboard_api = new node_pinboard(process.env.PINBOARD_API_TOKEN),
@@ -14,11 +14,13 @@ exports.get = function (request, response) {
             } else {
                 // At least one bookmark
 
-                // Get the unread bookmarks only
+                // Include only unread bookmarks
                 unread_bookmarks = [];
                 api_response.forEach (function(bookmark) {
                     if (bookmark.toread == 'yes') {
+                        // Add a HashID to each bookmark item so it can be used for the "Edit" link in the bookmark list
                         bookmark.hashid = hash_ids.encode(bookmark.href);
+
                         unread_bookmarks.push(bookmark);
                     }
                 });
