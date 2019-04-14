@@ -1,7 +1,6 @@
 import React from 'react';
 
-import './App.css';
-import Logo from './logo.svg';
+import '../css/App.css';
 
 import Recent from './Recent';
 import Unread from './Unread';
@@ -15,7 +14,7 @@ function App() {
                 <nav>
                     <header>
                         <Link to="/">
-                            <img src={Logo} alt="Logo" />
+                            <img src="/logo.svg" alt="Logo" />
                             <span>Pinboard Client</span>
                         </Link>
                     </header>
