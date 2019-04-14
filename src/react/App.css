@@ -49,4 +49,19 @@ nav li {
   margin: 0 10px 0 0;
   padding: 0;
 }
- 
+
+ul.bookmarks {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  list-style: none outside none;
+}
+
+ul.bookmarks li {
+  margin: 0 0 10px;
+  padding: 0;
+}
+
+ul.bookmarks li.unread a::before {
+  content: '>> ';
+}
