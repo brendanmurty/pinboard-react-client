@@ -1,7 +1,10 @@
 import React from 'react';
 
-import Logo from './logo.svg';
 import './App.css';
+import Logo from './logo.svg';
+
+import Recent from './Recent';
+import Unread from './Unread';
 
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 
@@ -33,22 +36,6 @@ function App() {
                 </section>
             </main>
         </Router>
-    );
-}
-
-function Recent() {
-    return (
-        <div>
-            <h2>Recent</h2>
-        </div>
-    );
-}
-
-function Unread() {
-    return (
-        <div>
-            <h2>Unread</h2>
-        </div>
     );
 }
 
