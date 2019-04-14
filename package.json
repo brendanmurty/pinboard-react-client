@@ -9,9 +9,9 @@
     "url": "https://github.com/brendanmurty/pinboard-react-client"
   },
   "dependencies": {
-    "cors": "^2.8.5",
     "dotenv": "^7.0.0",
     "express": "^4.16.4",
+    "express-basic-auth": "^1.1.6",
     "node-pinboard": "^1.0.0",
     "react": "^16.8.1",
     "react-dom": "^16.8.1",
