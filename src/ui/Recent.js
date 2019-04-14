@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 
 class Recent extends React.Component {
     constructor(props) {
@@ -42,7 +42,7 @@ class Recent extends React.Component {
                     
                     <ul class="bookmarks">
                         {bookmarks.map(bookmark => (
-                            <li class={bookmark.toread == 'yes' ? 'unread' : ''}>
+                            <li class={bookmark.toread === 'yes' ? 'unread' : ''}>
                                 <a href={bookmark.href}>{bookmark.description}</a>
                             </li>
                         ))}        
