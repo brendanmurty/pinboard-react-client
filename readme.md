@@ -34,3 +34,9 @@ npm run build
 ```
 npm run start
 ```
+
+### Compile asset bundle and start the web server
+
+```
+npm run build-start
+```

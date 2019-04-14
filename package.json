@@ -21,7 +21,8 @@
   },
   "scripts": {
     "build": "react-scripts build",
-    "start": "node -r dotenv/config server.js"
+    "start": "node -r dotenv/config server.js",
+    "build-start": "npm run build && npm run start"
   },
   "eslintConfig": {
     "extends": "react-app"
