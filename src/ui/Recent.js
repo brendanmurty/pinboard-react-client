@@ -42,8 +42,13 @@ class Recent extends React.Component {
                     
                     <ul class="bookmarks">
                         {bookmarks.map(bookmark => (
-                            <li class={bookmark.toread === 'yes' ? 'unread' : ''}>
-                                <a href={bookmark.href}>{bookmark.description}</a>
+                            <li class={bookmark.toread === 'yes' ? 'bookmark unread' : 'bookmark'}>
+                                <a href={bookmark.href} class="title">
+                                    <span class="title">{bookmark.description}</span>
+                                </a>
+                                <a href={"/bookmark/" + bookmark.hash} class="edit">
+                                    Edit
+                                </a>
                             </li>
                         ))}        
                     </ul>

@@ -4,6 +4,7 @@ body {
   height: 100%;
   padding: 0;
   margin: 0;
+  min-width: 300px;
   background-color: #000;
   color: #fff;
   font: 400 16px/25px "Merriweather";
@@ -52,21 +53,27 @@ nav li {
   padding: 0;
 }
 
-ul.bookmarks {
+.bookmarks {
   margin: 0;
   padding: 0;
   width: 100%;
   list-style: none outside none;
 }
 
-ul.bookmarks li {
+.bookmark {
   margin: 0 0 10px;
   padding: 0;
 }
 
-ul.bookmarks li.unread a,
-ul.bookmarks li.unread a:active,
-ul.bookmarks li.unread a:hover,
-ul.bookmarks li.unread a:visited {
+.bookmark.unread a.title,
+.bookmark.unread a.title:active,
+.bookmark.unread a.title:hover,
+.bookmark.unread a.title:visited {
   color: #6923c5;
+}
+
+.bookmark a.edit {
+  color: #ccc;
+  float: right;
+  font-size: 12px;
 }

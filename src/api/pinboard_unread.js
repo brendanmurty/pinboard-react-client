@@ -1,7 +1,9 @@
 // API: /api/pinboard_unread
 
 var node_pinboard = require('node-pinboard'),
-    pinboard_api = new node_pinboard(process.env.PINBOARD_API_TOKEN);// TODO: Load this from the user record when that system has been built
+    pinboard_api = new node_pinboard(process.env.PINBOARD_API_TOKEN), // TODO: Load this from the user record when that system has been built
+    hashids = require('hashids'),
+    hash_ids = new hashids();
 
 exports.get = function (request, response) {
     pinboard_api.all({}, function(api_error, api_response) {
@@ -16,6 +18,7 @@ exports.get = function (request, response) {
                 unread_bookmarks = [];
                 api_response.forEach (function(bookmark) {
                     if (bookmark.toread == 'yes') {
+                        bookmark.hashid = hash_ids.encode(bookmark.href);
                         unread_bookmarks.push(bookmark);
                     }
                 });

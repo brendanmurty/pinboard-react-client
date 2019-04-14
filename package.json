@@ -12,6 +12,7 @@
     "dotenv": "^7.0.0",
     "express": "^4.16.4",
     "express-basic-auth": "^1.1.6",
+    "hashids": "^1.2.2",
     "node-pinboard": "^1.0.0",
     "react": "^16.8.1",
     "react-dom": "^16.8.1",
