@@ -1,12 +1,27 @@
-var pinboard = require('node-pinboard'),
-    pinboard_api = new pinboard(process.env.REACT_APP_PINBOARD_API_TOKEN);
+// API: /api/pinboard_unread
+
+var node_pinboard = require('node-pinboard'),
+    pinboard_api = new node_pinboard(process.env.PINBOARD_API_TOKEN);
 
 exports.get = function (request, response) {
-    pinboard_api.get({tag: 'toread'}, function(api_error, api_response) {
+    pinboard_api.all({}, function(api_error, api_response) {
         if (!api_error) {
-            response.writeHead(200, { 'Content-Type': 'application/json' });
-            response.write(api_response);
-            response.end();
+            if (api_response === []) {
+                // No bookmarks
+                response.end('[]');
+            } else {
+                // At least one bookmark
+
+                // Get the unread bookmarks only
+                unread_bookmarks = [];
+                api_response.forEach (function(bookmark) {
+                    if (bookmark.toread == 'yes') {
+                        unread_bookmarks.push(bookmark);
+                    }
+                });
+
+                response.end(JSON.stringify(unread_bookmarks));
+            }
         }
     });
 };
