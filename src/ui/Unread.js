@@ -32,27 +32,23 @@ class Unread extends React.Component {
         const { error, loaded, bookmarks } = this.state;
 
         if (error) {
-            return <article><h2>Unread</h2><p class="error">{error}</p></article>;
+            return <p class="error">{error}</p>;
         } else if (!loaded) {
-            return <article><h2>Unread</h2><p class="loading">Loading...</p></article>;
+            return <p class="loading">Loading...</p>;
         } else {
             return (
-                <article>
-                    <h2>Unread</h2>
-                    
-                    <ul class="bookmarks">
-                        {bookmarks.map(bookmark => (
-                            <li class="bookmark unread">
-                                <a href={bookmark.href} class="title">
-                                    <span class="title">{bookmark.description}</span>
-                                </a>
-                                <a href={"/bookmark/" + bookmark.hash} class="edit">
-                                    Edit
-                                </a>
-                            </li>
-                        ))}        
-                    </ul>
-                </article>
+                <ul class="bookmarks">
+                    {bookmarks.map(bookmark => (
+                        <li class="bookmark unread">
+                            <a href={bookmark.href} class="title">
+                                <span class="title">{bookmark.description}</span>
+                            </a>
+                            <a href={"/bookmark/" + bookmark.hash} class="edit">
+                                Edit
+                            </a>
+                        </li>
+                    ))}        
+                </ul>
             );
         }
     }
