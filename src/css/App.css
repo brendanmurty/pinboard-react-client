@@ -86,17 +86,20 @@ nav a.active:hover {
   float: left;
 }
 
+.bookmark a.title {
+  text-align: left;
+  width: 90%;
+  padding: 0;
+  display: block;
+  float: left;
+}
+
 .bookmark.unread a.title,
 .bookmark.unread a.title:active,
 .bookmark.unread a.title:focus,
 .bookmark.unread a.title:hover,
 .bookmark.unread a.title:visited {
   color: #6923c5;
-  text-align: left;
-  width: 90%;
-  padding: 0;
-  display: block;
-  float: left;
 }
 
 .bookmark a.edit {

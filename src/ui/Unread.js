@@ -41,7 +41,7 @@ class Unread extends React.Component {
                     {bookmarks.map(bookmark => (
                         <li class="bookmark unread">
                             <a href={bookmark.href} class="title">
-                                <span class="title">{bookmark.description}</span>
+                                {bookmark.description}
                             </a>
                             <a href={"/bookmark/" + bookmark.hash} class="edit">
                                 Edit
