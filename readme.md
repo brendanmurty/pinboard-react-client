@@ -2,6 +2,8 @@
 
 An alternative front-end for the [Pinboard](https://pinboard.in/) bookmarking service created with [React](https://reactjs.org/) and [Express](https://expressjs.com/).
 
+The app also uses an icon from the [Feather](https://feathericons.com/) open-source icon pack.
+
 ![Screenshot of application](screenshot.png)
 
 ## Directory Structure
