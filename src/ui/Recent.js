@@ -12,26 +12,24 @@ class Recent extends React.Component {
             loaded: false,
             bookmarks: []
         };
-    }
 
-    componentDidMount() {
-        // Attempt to load the data from the API
-        fetch('/api/recent').then(response => response.json()).then(
-            (response) => {
-                // Valid response in JSON format
-                this.setState({
-                    loaded: true,
-                    bookmarks: response
-                });
-            },
-            (error) => {
-                // Error encountered
-                this.setState({
-                    loaded: true,
-                    error
-                });
-            }
-        );
+      // Attempt to load the data from the API
+      fetch('/api/recent').then(response => response.json()).then(
+        (response) => {
+          // Valid response in JSON format
+          this.setState({
+            loaded: true,
+            bookmarks: response
+          });
+        },
+        (error) => {
+          // Error encountered
+          this.setState({
+            loaded: true,
+            error
+          });
+        }
+      );
     }
 
     render() {
@@ -39,18 +37,18 @@ class Recent extends React.Component {
         const { error, loaded, bookmarks } = this.state;
 
         if (error) {
-            return <p class="error">{error}</p>;
-        } else if (!loaded) {
-            return <p class="loading">Loading...</p>;
+            return <p className="error">{error}</p>;
+        } else if (!loaded || bookmarks.length === 0) {
+          return <p className="loading">Loading...</p>;
         } else {
             return (
-                <ul class="bookmarks">
+              <ul className="bookmarks">
                     {bookmarks.map(bookmark => (
-                        <li class={bookmark.toread === 'yes' ? 'bookmark unread' : 'bookmark'}>
-                            <a href={bookmark.href} class="title">
+                        <li className={bookmark.toread === 'yes' ? 'bookmark unread' : 'bookmark'}>
+                        <a href={bookmark.href} className="title">
                                 {bookmark.description}
                             </a>
-                            <a href={"/bookmark/" + bookmark.hash} class="edit">
+                        <a href={"/bookmark/" + bookmark.hash} className="edit">
                                 Edit
                             </a>
                         </li>
