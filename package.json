@@ -17,10 +17,11 @@
     "hashids": "^1.2.2",
     "minimist": ">=1.2.2",
     "node-pinboard": "^1.0.0",
-    "react": "^16.13.1",
-    "react-dom": "^16.13.1",
-    "react-router-dom": "^4.3.1",
-    "react-scripts": "^3.4.3"
+    "nth-check": "^2.1.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.8.0",
+    "react-scripts": "^5.0.1"
   },
   "scripts": {
     "build": "react-scripts build",
@@ -34,6 +35,5 @@
     "not dead",
     "not ie <= 11",
     "not op_mini all"
-  ],
-  "devDependencies": {}
+  ]
 }
