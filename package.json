@@ -1,7 +1,7 @@
 {
   "name": "pinboard-client",
   "version": "0.1.0",
-  "author": "Brendan Murty <b@murty.io> (https://b.murty.io/)",
+  "author": "Brendan Murty <brendan@murty.au> (https://murty.au/)",
   "description": "An alternative front-end for the Pinboard bookmarking service.",
   "private": true,
   "repository": {
