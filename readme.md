@@ -65,3 +65,5 @@ npm run build
 ```
 npm run start
 ```
+
+When prompted, use `pinboard` as the Username and the value of `PINBOARD_AUTH_PASS` as the Password.
