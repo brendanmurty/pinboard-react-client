@@ -7,7 +7,7 @@ import '../css/App.css';
 import Recent from './Recent';
 import Unread from './Unread';
 
-import { BrowserRouter as Router, Route, Link, NavLink } from "react-router-dom";
+import { BrowserRouter as Router, Route, Routes, Link, NavLink } from "react-router-dom";
 
 function App() {
     return (
@@ -21,18 +21,20 @@ function App() {
                     <nav>
                         <ul>
                             <li>
-                                <NavLink exact to="/" activeClassName="active">Recent</NavLink>
+                              <NavLink exact="true" to="/" activeclassname="active">Recent</NavLink>
                             </li>
                             <li>
-                                <NavLink to="/unread" activeClassName="active">Unread</NavLink>
+                              <NavLink to="/unread" activeclassname="active">Unread</NavLink>
                             </li>
                         </ul>
                     </nav>
                 </header>
 
                 <main>
+                  <Routes>
                     <Route exact path="/" component={Recent} />
                     <Route path="/unread" component={Unread} />
+                  </Routes>
                 </main>
             </section>
         </Router>

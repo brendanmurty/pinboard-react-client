@@ -35,7 +35,7 @@ Then edit the `.env` file to use the appropriate configuration values for the ap
 
 1. Visit your [Pinboard password page](https://pinboard.in/settings/password)
 2. Save this in `.env` as the value of the `PINBOARD_API_TOKEN` variable
-3. Apply the changes to the application: `npm run build-start`
+3. Apply the changes to the application: `npm run serve`
 
 ### Update the password for the login dialog
 
@@ -45,12 +45,12 @@ The username for this dialog is `pinboard`, but this can be changed by editing t
 
 The password for this dialog is set via the `PINBOARD_AUTH_PASS` variable in the `.env` file.
 
-To apply the changes to the application: `npm run build-start`
+To apply the changes to the application: `npm run serve`
 
 ### Update the domain and port configuration
 
 1. Edit the `APP_DOMAIN` and `APP_PORT` values in `.env`
-2. Apply the changes to the application: `npm run build-start`
+2. Apply the changes to the application: `npm run serve`
 
 ## Commands
 
