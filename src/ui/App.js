@@ -10,35 +10,35 @@ import Unread from './Unread';
 import { BrowserRouter as Router, Route, Routes, Link, NavLink } from "react-router-dom";
 
 function App() {
-    return (
-        <Router>
-            <section>
-                <header>
-                    <Link to="/">
-                        <img src="/logo.svg" alt="Bookmark" />
-                    </Link>
+  return (
+    <Router>
+      <section>
+        <header>
+          <Link to="/">
+            <img src="/logo.svg" alt="Bookmark" />
+          </Link>
 
-                    <nav>
-                        <ul>
-                            <li>
-                              <NavLink exact="true" to="/" activeclassname="active">Recent</NavLink>
-                            </li>
-                            <li>
-                              <NavLink to="/unread" activeclassname="active">Unread</NavLink>
-                            </li>
-                        </ul>
-                    </nav>
-                </header>
+          <nav>
+            <ul>
+              <li>
+                <NavLink exact="true" to="/" activeclassname="active">Recent</NavLink>
+              </li>
+              <li>
+                <NavLink to="/unread" activeclassname="active">Unread</NavLink>
+              </li>
+            </ul>
+          </nav>
+        </header>
 
-                <main>
-                  <Routes>
-                    <Route exact="true" path="/" element={<Recent />} />
-                    <Route path="/unread" element={<Unread />} />
-                  </Routes>
-                </main>
-            </section>
-        </Router>
-    );
+        <main>
+          <Routes>
+          <Route exact="true" path="/" element={<Recent />} />
+          <Route path="/unread" element={<Unread />} />
+          </Routes>
+        </main>
+      </section>
+    </Router>
+  );
 }
 
 export default App;

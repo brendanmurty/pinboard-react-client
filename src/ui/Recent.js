@@ -3,60 +3,60 @@
 import React from 'react';
 
 class Recent extends React.Component {
-    constructor(props) {
-        // Prepare the component's properties
-        super(props);
+  constructor(props) {
+    // Prepare the component's properties
+    super(props);
 
-        this.state = {
-            error: false,
-            loaded: false,
-            bookmarks: []
-        };
+    this.state = {
+      error: false,
+      loaded: false,
+      bookmarks: []
+    };
 
-      // Attempt to load the data from the API
-      fetch('/api/recent').then(response => response.json()).then(
-        (response) => {
-          // Valid response in JSON format
-          this.setState({
-            loaded: true,
-            bookmarks: response
-          });
-        },
-        (error) => {
-          // Error encountered
-          this.setState({
-            loaded: true,
-            error
-          });
-        }
+    // Attempt to load the data from the API
+    fetch('/api/recent').then(response => response.json()).then(
+    (response) => {
+      // Valid response in JSON format
+      this.setState({
+      loaded: true,
+      bookmarks: response
+      });
+    },
+    (error) => {
+      // Error encountered
+      this.setState({
+      loaded: true,
+      error
+      });
+    }
+    );
+  }
+
+  render() {
+    // Load the component's properties
+    const { error, loaded, bookmarks } = this.state;
+
+    if (error) {
+      return <p className="error">{error}</p>;
+    } else if (!loaded || bookmarks.length === 0) {
+      return <p className="loading">Loading...</p>;
+    } else {
+      return (
+        <ul className="bookmarks">
+          {bookmarks.map(bookmark => (
+            <li className={bookmark.toread === 'yes' ? 'bookmark unread' : 'bookmark'}>
+            <a href={bookmark.href} className="title">
+                {bookmark.description}
+              </a>
+            <a href={"/bookmark/" + bookmark.hash} className="edit">
+                Edit
+              </a>
+            </li>
+          ))}    
+        </ul>
       );
     }
-
-    render() {
-        // Load the component's properties
-        const { error, loaded, bookmarks } = this.state;
-
-        if (error) {
-            return <p className="error">{error}</p>;
-        } else if (!loaded || bookmarks.length === 0) {
-          return <p className="loading">Loading...</p>;
-        } else {
-            return (
-              <ul className="bookmarks">
-                    {bookmarks.map(bookmark => (
-                        <li className={bookmark.toread === 'yes' ? 'bookmark unread' : 'bookmark'}>
-                        <a href={bookmark.href} className="title">
-                                {bookmark.description}
-                            </a>
-                        <a href={"/bookmark/" + bookmark.hash} className="edit">
-                                Edit
-                            </a>
-                        </li>
-                    ))}        
-                </ul>
-            );
-        }
-    }
+  }
 }
 
 export default Recent;
