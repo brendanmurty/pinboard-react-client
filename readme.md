@@ -60,10 +60,16 @@ To apply the changes to the application: `npm run serve`
 npm run build
 ```
 
-### Start the web server
+### Start a local development server
 
 ```
 npm run start
+```
+
+### Start the web server
+
+```
+npm run serve
 ```
 
 When prompted, use `pinboard` as the Username and the value of `PINBOARD_AUTH_PASS` as the Password.
