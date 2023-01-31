@@ -1,6 +1,6 @@
 // API: /api/unread - Returns a JSON string of the user's unread posts
 
-var node_pinboard = require('node-pinboard'),
+var node_pinboard = require('node-pinboard').default,
     pinboard_api = new node_pinboard(process.env.PINBOARD_API_TOKEN),
     hashids = require('hashids'),
     hash_ids = new hashids();

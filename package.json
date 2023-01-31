@@ -16,7 +16,7 @@
     "express-basic-auth": "^1.2.1",
     "hashids": "^1.2.2",
     "minimist": ">=1.2.2",
-    "node-pinboard": "^1.0.0",
+    "node-pinboard": "^2.0.1",
     "nth-check": "^2.1.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
