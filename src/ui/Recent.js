@@ -45,7 +45,7 @@ class Recent extends React.Component {
         // Return a list of the recent bookmarks returned from the API
         <ul className="bookmarks">
           {bookmarks.map(bookmark => (
-            <li className={bookmark.toread === 'yes' ? 'bookmark unread' : 'bookmark'}>
+            <li className={bookmark.toread === 'yes' ? 'bookmark unread' : 'bookmark read'}>
             <a href={bookmark.href} className="title">
                 {bookmark.description}
               </a>

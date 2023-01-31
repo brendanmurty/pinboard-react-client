@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Merriweather');
 
+/* Common */
+
 body {
   height: 100%;
   padding: 0;
@@ -24,6 +26,8 @@ a:hover {
   color: #23c5b0;
   text-decoration: underline;
 }
+
+/* Layout */
 
 section {
   width: 96%;
@@ -72,6 +76,8 @@ nav a.active:hover {
   color: #fff
 }
 
+/* Bookmarks */
+
 .bookmarks {
   margin: 0;
   padding: 0;
@@ -94,12 +100,12 @@ nav a.active:hover {
   float: left;
 }
 
-.bookmark.unread a.title,
-.bookmark.unread a.title:active,
-.bookmark.unread a.title:focus,
-.bookmark.unread a.title:hover,
-.bookmark.unread a.title:visited {
-  color: #6923c5;
+.bookmark.read a.title,
+.bookmark.read a.title:active,
+.bookmark.read a.title:focus,
+.bookmark.read a.title:hover,
+.bookmark.read a.title:visited {
+  color: #9f6ae4;
 }
 
 .bookmark a.edit {
