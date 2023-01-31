@@ -43,6 +43,7 @@ class Unread extends React.Component {
     } else if (!loaded) {
       return <p className="loading">Loading...</p>;
     } else {
+      // Return a list of the unread bookmarks returned from the API
       return (
         <ul className="bookmarks">
           {bookmarks.map(bookmark => (

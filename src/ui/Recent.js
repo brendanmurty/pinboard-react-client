@@ -38,10 +38,11 @@ class Recent extends React.Component {
 
     if (error) {
       return <p className="error">{error}</p>;
-    } else if (!loaded || bookmarks.length === 0) {
+    } else if (!loaded) {
       return <p className="loading">Loading...</p>;
     } else {
       return (
+        // Return a list of the recent bookmarks returned from the API
         <ul className="bookmarks">
           {bookmarks.map(bookmark => (
             <li className={bookmark.toread === 'yes' ? 'bookmark unread' : 'bookmark'}>

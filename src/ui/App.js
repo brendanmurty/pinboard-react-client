@@ -32,8 +32,8 @@ function App() {
 
         <main>
           <Routes>
-          <Route exact="true" path="/" element={<Recent />} />
-          <Route path="/unread" element={<Unread />} />
+            <Route exact="true" path="/" element={<Recent />} />
+            <Route path="/unread" element={<Unread />} />
           </Routes>
         </main>
       </section>
