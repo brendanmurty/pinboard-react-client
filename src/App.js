@@ -2,10 +2,10 @@
 
 import React from 'react';
 
-import '../css/App.css';
+import '@css/App.css';
 
-import Recent from './Recent';
-import Unread from './Unread';
+import Recent from '@views/Recent/Recent';
+import Unread from '@views/Unread/Unread';
 
 import { BrowserRouter as Router, Route, Routes, Link, NavLink } from "react-router-dom";
 

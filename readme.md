@@ -12,9 +12,10 @@ The app also uses an icon from the [Feather](https://feathericons.com/) open-sou
 - [docs](docs/) - Project documentation files
 - [docs/todo.md](docs/todo.md) - The project's task list
 - [public](public/) - Front-end image and HTML files that are also used in the build process
-- [src/api](src/api/) - Back-end API endpoint logic built using Express
+- [server/](server/) - Back-end API endpoint logic built using Express
 - [src/css](src/css/) - Styling files for the UI
-- [src/ui](src/ui/) - Front-end UI components built using React
+- [src/components](src/components/) - Front-end UI components built using React
+- [src/views](src/views/) - Front-end UI views built using React
 - [src/index.js](src/index.js) - Front-end entry point used to initialise the UI via React
 - [license.md](license.md) - The project's license file for details on the rights and limitations when using the code here in your own projects
 - [package.json](package.json) - Node package configuration file that also includes shortcut commands in the `scripts` section

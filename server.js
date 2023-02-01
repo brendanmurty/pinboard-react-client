@@ -8,8 +8,8 @@ const app_domain = process.env.PINBOARD_APP_DOMAIN || 'localhost';
 const app_port = process.env.PINBOARD_APP_PORT || 8888;
 
 // Load back-end API controllers
-var api_recent = require('./src/api/recent.js'),
-  api_unread = require('./src/api/unread.js');
+var api_recent = require('./server/recent.js'),
+  api_unread = require('./server/unread.js');
 
 // Configure back-end API routes
 router.get('/api/recent', api_recent.get);

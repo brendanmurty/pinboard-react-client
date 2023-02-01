@@ -2,7 +2,7 @@
 
 import React from 'react';
 
-import BookmarkList from './BookmarkList';
+import BookmarkList from '@components/BookmarkList/BookmarkList';
 
 class Unread extends React.Component {
   constructor(props) {
