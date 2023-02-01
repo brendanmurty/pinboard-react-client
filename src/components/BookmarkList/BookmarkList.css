@@ -1,0 +1,36 @@
+.bookmarks {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  list-style: none outside none;
+}
+
+.bookmark {
+  margin: 0 0 15px;
+  padding: 0;
+  width: 100%;
+  float: left;
+}
+
+.bookmark a.title {
+  text-align: left;
+  width: 90%;
+  padding: 0;
+  display: block;
+  float: left;
+}
+
+.bookmark.read .title {
+  color: #9f6ae4 !important;
+}
+
+.bookmark .edit-link {
+  color: #ccc;
+  font-size: 12px;
+  text-align: right;
+  width: 10%;
+  padding: 0;
+  display: block;
+  float: right;
+}
+

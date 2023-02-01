@@ -9,7 +9,8 @@ import Unread from '@views/Unread/Unread';
 
 import { BrowserRouter as Router, Route, Routes, Link, NavLink } from "react-router-dom";
 
-function App() {
+export default function App() {
+
   return (
     <Router>
       <section>
@@ -32,13 +33,12 @@ function App() {
 
         <main>
           <Routes>
-            <Route exact="true" path="/" element={<Recent />} />
+            <Route exact="true" path="/" element={<Recent />}  />
             <Route path="/unread" element={<Unread />} />
           </Routes>
         </main>
       </section>
     </Router>
   );
-}
 
-export default App;
+}

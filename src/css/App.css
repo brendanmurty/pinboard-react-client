@@ -27,6 +27,10 @@ a:hover {
   text-decoration: underline;
 }
 
+.hidden {
+  display: none !important;
+}
+
 /* Layout */
 
 section {
@@ -74,46 +78,4 @@ nav a.active:visited,
 nav a.active:focus,
 nav a.active:hover {
   color: #fff
-}
-
-/* Bookmarks */
-
-.bookmarks {
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  list-style: none outside none;
-}
-
-.bookmark {
-  margin: 0 0 15px;
-  padding: 0;
-  width: 100%;
-  float: left;
-}
-
-.bookmark a.title {
-  text-align: left;
-  width: 90%;
-  padding: 0;
-  display: block;
-  float: left;
-}
-
-.bookmark.read a.title,
-.bookmark.read a.title:active,
-.bookmark.read a.title:focus,
-.bookmark.read a.title:hover,
-.bookmark.read a.title:visited {
-  color: #9f6ae4;
-}
-
-.bookmark a.edit {
-  color: #ccc;
-  font-size: 12px;
-  text-align: right;
-  width: 10%;
-  padding: 0;
-  display: block;
-  float: right;
 }

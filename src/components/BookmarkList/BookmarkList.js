@@ -1,31 +1,36 @@
 import React from 'react';
 
+import './BookmarkList.css';
+
 class BookmarkList extends React.Component {
-  constructor(props) {
-    // Prepare the component's properties
-    super(props);
+
+  constructor(properties) {
+    super(properties);
 
     this.state = {
-      bookmarks: props.bookmarks
-    }
+      bookmarks: properties.bookmarks
+    };
   }
 
   render() {
+
     return (
       <ul className="bookmarks">
         {this.state.bookmarks.map(bookmark => (
-        <li className={bookmark.toread === 'yes' ? 'bookmark unread' : 'bookmark read'}>
-          <a href={bookmark.href} className="title">
-            {bookmark.description}
+        <li className={ bookmark.toread === 'yes' ? 'bookmark unread' : 'bookmark read' }>
+          <a href={ bookmark.href } className="title">
+            { bookmark.description }
           </a>
-          <a href={"/bookmark/" + bookmark.hash} className="edit">
+          <a href={ "/edit/" + bookmark.hash } className="edit-link">
             Edit
           </a>
         </li>
-        ))}    
+        ))}
       </ul>
     );
+
   }
+
 }
 
 export default BookmarkList;
