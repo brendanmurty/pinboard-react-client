@@ -1,8 +1,8 @@
 # Pinboard React Client
 
-An alternative front-end for the [Pinboard](https://pinboard.in/) bookmarking service created with [React](https://reactjs.org/) and [Express](https://expressjs.com/).
+A basic example of some [React](https://reactjs.org/) and [Express](https://expressjs.com/) code which lists bookmarks from [Pinboard](https://pinboard.in/).
 
-The app also uses an icon from the [Feather](https://feathericons.com/) open-source icon pack.
+I've also used an icon from the [Feather](https://feathericons.com/) open-source icon pack.
 
 ![Screenshot of application](screenshot.png)
 
