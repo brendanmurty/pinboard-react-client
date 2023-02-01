@@ -2,6 +2,8 @@
 
 import React from 'react';
 
+import BookmarkList from './BookmarkList';
+
 class Recent extends React.Component {
   constructor(props) {
     // Prepare the component's properties
@@ -15,20 +17,20 @@ class Recent extends React.Component {
 
     // Attempt to load the data from the API
     fetch('/api/recent').then(response => response.json()).then(
-    (response) => {
-      // Valid response in JSON format
-      this.setState({
-      loaded: true,
-      bookmarks: response
-      });
-    },
-    (error) => {
-      // Error encountered
-      this.setState({
-      loaded: true,
-      error
-      });
-    }
+      (response) => {
+        // Valid response in JSON format
+        this.setState({
+          loaded: true,
+          bookmarks: response
+        });
+      },
+      (error) => {
+        // Error encountered
+        this.setState({
+          loaded: true,
+          error
+        });
+      }
     );
   }
 
@@ -41,20 +43,9 @@ class Recent extends React.Component {
     } else if (!loaded) {
       return <p className="loading">Loading...</p>;
     } else {
+      // Show a list of the recent bookmarks returned from the API
       return (
-        // Return a list of the recent bookmarks returned from the API
-        <ul className="bookmarks">
-          {bookmarks.map(bookmark => (
-          <li className={bookmark.toread === 'yes' ? 'bookmark unread' : 'bookmark read'}>
-            <a href={bookmark.href} className="title">
-              {bookmark.description}
-            </a>
-            <a href={"/bookmark/" + bookmark.hash} className="edit">
-              Edit
-            </a>
-          </li>
-          ))}    
-        </ul>
+        <BookmarkList bookmarks={ bookmarks } />
       );
     }
   }

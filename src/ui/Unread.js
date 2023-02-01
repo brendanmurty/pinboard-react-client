@@ -2,6 +2,8 @@
 
 import React from 'react';
 
+import BookmarkList from './BookmarkList';
+
 class Unread extends React.Component {
   constructor(props) {
     // Prepare the component's properties
@@ -43,20 +45,9 @@ class Unread extends React.Component {
     } else if (!loaded) {
       return <p className="loading">Loading...</p>;
     } else {
-      // Return a list of the unread bookmarks returned from the API
+      // Show a list of the unread bookmarks returned from the API
       return (
-        <ul className="bookmarks">
-          {bookmarks.map(bookmark => (
-            <li className="bookmark unread">
-              <a href={bookmark.href} className="title">
-                {bookmark.description}
-              </a>
-              <a href={"/bookmark/" + bookmark.hash} className="edit">
-                Edit
-              </a>
-            </li>
-          ))}    
-        </ul>
+        <BookmarkList bookmarks={ bookmarks } />
       );
     }
   }
