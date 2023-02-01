@@ -26,7 +26,7 @@ The app also uses an icon from the [Feather](https://feathericons.com/) open-sou
 
 ```
 npm install
-cp example.env .env
+cp -n example.env .env
 ```
 
 Then edit the `.env` file to use the appropriate configuration values for the application.
@@ -36,16 +36,6 @@ Then edit the `.env` file to use the appropriate configuration values for the ap
 1. Visit your [Pinboard password page](https://pinboard.in/settings/password)
 2. Save this in `.env` as the value of the `PINBOARD_API_TOKEN` variable
 3. Apply the changes to the application: `npm run serve`
-
-### Update the password for the login dialog
-
-The system currently uses a Basic HTTP Authentication dialog for logging in.
-
-The username for this dialog is `pinboard`, but this can be changed by editing the `express-basic-auth` section in [server.js](server.js).
-
-The password for this dialog is set via the `PINBOARD_AUTH_PASS` variable in the `.env` file.
-
-To apply the changes to the application: `npm run serve`
 
 ### Update the domain and port configuration
 
@@ -71,5 +61,3 @@ npm run start
 ```
 npm run serve
 ```
-
-When prompted, use `pinboard` as the Username and the value of `PINBOARD_AUTH_PASS` as the Password.

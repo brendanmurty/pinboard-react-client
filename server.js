@@ -7,14 +7,6 @@ var express = require('express'),
 const app_domain = process.env.PINBOARD_APP_DOMAIN || 'localhost';
 const app_port = process.env.PINBOARD_APP_PORT || 8888;
 
-// Show a browser-level user prompt for basic authentication
-const basic_auth = require('express-basic-auth');
-const user_pass = process.env.PINBOARD_AUTH_PASS;
-app.use(basic_auth({
-  users: { 'pinboard': user_pass },
-  challenge: true
-}))
-
 // Load back-end API controllers
 var api_recent = require('./src/api/recent.js'),
   api_unread = require('./src/api/unread.js');

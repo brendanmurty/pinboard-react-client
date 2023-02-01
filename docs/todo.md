@@ -2,7 +2,7 @@
 
 - [ ] Implement **SSL** and redirect all **HTTP** requests to **HTTPS** requests
 - [ ] Move the duplicated logic in the React components to a shared location to limit duplicated code
-- [ ] Build a proper **user-based authentication system** to replace the basic HTTP Authentication prompt (related to the `PINBOARD_AUTH_PASS` environment variable) - including login, logout and user profile features
+- [ ] Build a proper **user-based authentication system** - including login, logout and user profile features
 - [ ] Move the Pinboard token from the `PINBOARD_API_TOKEN` environment variable to an encrypted column on the user record when that system has been built
 - [ ] Finish the **Bookmark Detail** feature so that it allows the user to view and edit bookmark properties such as the unread status, tags, title and URL
 - [ ] Build a **Add Bookmark** page and related API method
