@@ -14,6 +14,11 @@ exports.get = function (request, response) {
 
         // Include only unread bookmarks
         unread_bookmarks = [];
+        api_response.forEach(function (bookmark) {
+          if (bookmark.toread == 'yes') {
+            unread_bookmarks.push(bookmark);
+          }
+        });
 
         response.end(JSON.stringify(unread_bookmarks));
       }
