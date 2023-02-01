@@ -12,7 +12,7 @@ The app also uses an icon from the [Feather](https://feathericons.com/) open-sou
 - [docs](docs/) - Project documentation files
 - [docs/todo.md](docs/todo.md) - The project's task list
 - [public](public/) - Front-end image and HTML files that are also used in the build process
-- [server/](server/) - Back-end API endpoint logic built using Express
+- [server](server/) - Back-end API endpoint logic built using Express
 - [src/css](src/css/) - Styling files for the UI
 - [src/components](src/components/) - Front-end UI components built using React
 - [src/views](src/views/) - Front-end UI views built using React
