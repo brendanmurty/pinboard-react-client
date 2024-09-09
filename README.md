@@ -4,7 +4,7 @@ A basic example of some [React](https://reactjs.org/) and [Express](https://expr
 
 I've also used an icon from the [Feather](https://feathericons.com/) open-source icon pack.
 
-![Screenshot of application](screenshot.png)
+![Screenshot of application](docs/screenshot.png)
 
 ## Directory Structure
 
