@@ -10,19 +10,19 @@
   },
   "license": "SEE LICENSE IN license.md",
   "dependencies": {
-    "acorn": "^8.0.1",
+    "acorn": "^8.12.1",
     "cors": "^2.8.5",
     "@craco/craco": "^7.1.0",
-    "dotenv": "^7.0.0",
+    "dotenv": "^16.4.5",
     "express": "^4.19.2",
-    "minimist": ">=1.2.2",
+    "minimist": "^1.2.8",
     "node-pinboard": "^2.0.1",
     "nth-check": "^2.1.1",
     "react": "^18.3.0",
     "react-dom": "^18.3.0",
     "react-router-dom": "^6.26.0",
     "react-scripts": "^5.0.1",
-    "web-vitals": "^2.1.4"
+    "web-vitals": "^4.2.3"
   },
   "scripts": {
     "build": "craco build",
