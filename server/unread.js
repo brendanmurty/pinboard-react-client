@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 // API: /api/unread - Returns a JSON string of the user's unread posts
 
 var node_pinboard = require('node-pinboard').default,
@@ -15,7 +16,7 @@ exports.get = function (request, response) {
         // Include only unread bookmarks
         unread_bookmarks = [];
         api_response.forEach(function (bookmark) {
-          if (bookmark.toread == 'yes') {
+          if (bookmark.toread === 'yes') {
             unread_bookmarks.push(bookmark);
           }
         });
