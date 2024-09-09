@@ -16,8 +16,8 @@ const app_domain = process.env.PINBOARD_APP_DOMAIN || 'localhost';
 const app_port = process.env.PINBOARD_APP_PORT || 8888;
 
 // Load back-end API controllers
-var api_recent = require('./server/recent.js'),
-  api_unread = require('./server/unread.js');
+var api_recent = require('./api/recent.js'),
+  api_unread = require('./api/unread.js');
 
 // Configure back-end API routes
 router.get('/api/recent', api_recent.get);
@@ -25,11 +25,11 @@ router.get('/api/unread', api_unread.get);
 
 // Allow static content requests
 app.use('/', router);
-app.use(express.static(__dirname + '/build'));
+app.use(express.static('./build'));
 
 // Send all other requests to React
 app.get('*', function (request, response) {
-  response.sendFile('index.html', { 'root': __dirname + '/build' });
+  response.sendFile('index.html', { 'root': './build' });
 });
 
 // Start the web server and listen for requests on the specified domain and port

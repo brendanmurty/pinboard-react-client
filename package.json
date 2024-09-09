@@ -27,10 +27,7 @@
   "scripts": {
     "build": "craco build",
     "install-clean": "rm -rf node_modules && rm package-lock.json && npm install",
-    "serve": "npm run build & node -r dotenv/config server.js"
-  },
-  "eslintConfig": {
-    "extends": "react-app"
+    "serve": "npm run build & node -r dotenv/config src/server.js"
   },
   "browserslist": [
     ">0.2%",

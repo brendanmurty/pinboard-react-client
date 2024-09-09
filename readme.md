@@ -51,13 +51,7 @@ Then edit the `.env` file to use the appropriate configuration values for the ap
 npm run build
 ```
 
-### Start a local development server
-
-```
-npm run start
-```
-
-### Start the web server
+### Start a local web server
 
 ```
 npm run serve
