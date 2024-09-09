@@ -1,5 +1,4 @@
-License
-=======
+# License
 
 *Based on an older version of the [CSS-Tricks License](https://web.archive.org/web/20201218120034/https://css-tricks.com/license/) by [Chris Coyier](https://chriscoyier.net/).*
 
