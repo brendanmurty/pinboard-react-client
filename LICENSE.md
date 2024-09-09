@@ -1,7 +1,7 @@
 License
 =======
 
-*Based on an older version of the [CSS-Tricks License](https://web.archive.org/web/20201218120034/https://css-tricks.com/license/) by [Chris Coyier](https://github.com/chriscoyier/).*
+*Based on an older version of the [CSS-Tricks License](https://web.archive.org/web/20201218120034/https://css-tricks.com/license/) by [Chris Coyier](https://chriscoyier.net/).*
 
 I don't give two hoots what you do with any of the design or code you find here.
 
